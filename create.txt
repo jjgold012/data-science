@@ -1,0 +1,2 @@
+CREATE TABLE soccer (date DATE, home_team VARCHAR(50), away_team VARCHAR(50), winner CHAR(1), home_score INT, away_score INT, home_odds FLOAT, draw_odds FLOAT, away_odds FLOAT);
+CREATE TABLE rugby (date DATE, home_team VARCHAR(50), away_team VARCHAR(50), winner CHAR(1), home_score INT, away_score INT, home_odds FLOAT, draw_odds FLOAT, away_odds FLOAT);
