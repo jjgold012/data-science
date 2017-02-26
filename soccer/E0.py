@@ -9,7 +9,7 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
-book = xlrd.open_workbook("E0.xlsx")
+book = xlrd.open_workbook("E0.xls")
 sheet = book.sheet_by_name("E0")
 
 # Establish a MySQL connection
@@ -23,7 +23,7 @@ cursor.execute('SET CHARACTER SET utf8;')
 cursor.execute('SET character_set_connection=utf8;')
 
 # Create the INSERT INTO sql query
-query = """INSERT INTO soccer VALUES \
+query = """INSERT IGNORE INTO soccer VALUES \
 (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 

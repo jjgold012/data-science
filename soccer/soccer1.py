@@ -35,8 +35,8 @@ query = """INSERT IGNORE INTO soccer VALUES \
 for r in range(6, sheet.nrows):
     values = []
     year = int(sheet.cell(r, 0).value)
-    month= months[sheet.cell(r, 2).value]
-    day  = int(sheet.cell(r, 1).value)
+    month = months[sheet.cell(r, 2).value]
+    day = int(sheet.cell(r, 1).value)
     py_date = dateutil.parser.parse(str(day) + '-' + str(month) + '-' + str(year)).date()
     values.append(py_date)
     for i in (6,7, 10,8,9,17,18,19):
@@ -57,9 +57,7 @@ database.commit()
 database.close()
 
 # Print results
-print("")
-print("All Done! Bye, for now.")
-print("")
+print("\nAll Done! Bye, for now.\n")
 columns = str(sheet.ncols)
 rows = str(sheet.nrows)
 print("I just imported", columns, " columns and", rows, "rows to MySQL!")
