@@ -5,7 +5,8 @@ cursor = connection.cursor()
 
 print "create soccer table"
 sql = "CREATE TABLE IF NOT EXISTS soccer " \
-      "(date DATE, league VARCHAR(50)," \
+      "(date DATE," \
+      " league VARCHAR(50)," \
       " home_team VARCHAR(50)," \
       " away_team VARCHAR(50)," \
       " winner CHAR(1)," \
@@ -13,5 +14,6 @@ sql = "CREATE TABLE IF NOT EXISTS soccer " \
       " away_score INT," \
       " home_odds FLOAT," \
       " draw_odds FLOAT," \
-      " away_odds FLOAT);"
+      " away_odds FLOAT," \
+      "PRIMARY KEY (date ,home_team, away_team));"
 cursor.execute(sql)
