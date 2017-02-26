@@ -114,5 +114,5 @@ sql = "CREATE TABLE IF NOT EXISTS tennis " \
       " score VARCHAR(50)," \
       " player1_odds FLOAT," \
       " player2_odds FLOAT," \
-      "PRIMARY KEY (date ,home_team, away_team));"
+      "PRIMARY KEY (date ,player1, player2));"
 cursor.execute(sql)
