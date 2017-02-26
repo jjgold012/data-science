@@ -51,12 +51,6 @@ for r in range(2, sheet.nrows):
     values.insert(1, sheet.cell(r, 0).value)
     print values
     cursor.execute(query, values[:10])
-    cursor.execute(query, values[:7]+values[10:13])
-    cursor.execute(query, values[:7]+values[13:16])
-    cursor.execute(query, values[:7]+values[16:19])
-    cursor.execute(query, values[:7]+values[19:22])
-    cursor.execute(query, values[:7]+values[22:25])
-    cursor.execute(query, values[:7]+values[25:28])
 
 # Close the cursor
 cursor.close()

@@ -13,7 +13,7 @@ book = xlrd.open_workbook("spain-01-archive.xls")
 sheet = book.sheet_by_name("spain-01-archive")
 
 # Establish a MySQL connection
-database = pymysql.connect(host="localhost", user="root", passwd="admin", db="project", charset='utf8')
+database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')
 
 # Get the cursor, which is used to traverse the database, line by line
 cursor = database.cursor()
@@ -23,8 +23,8 @@ cursor.execute('SET CHARACTER SET utf8;')
 cursor.execute('SET character_set_connection=utf8;')
 
 # Create the INSERT INTO sql query
-query = """INSERT INTO soccer VALUES \
-(%s, %s, %s, %s, %s, %s, %s, %s, %s)
+query = """INSERT IGNORE INTO soccer VALUES \
+(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 
@@ -52,7 +52,7 @@ for r in range(2, sheet.nrows):
         values.insert(3, 'D')
     else:
         values.insert(3, 'A')
-    print(len(values))
+    values.insert(1, 'La Liga')
     cursor.execute(query, values)
 
 # Close the cursor
