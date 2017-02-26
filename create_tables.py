@@ -104,8 +104,21 @@ sql = "CREATE TABLE IF NOT EXISTS hockey " \
       "PRIMARY KEY (date ,home_team, away_team));"
 cursor.execute(sql)
 
-print "create tennis table"
-sql = "CREATE TABLE IF NOT EXISTS tennis " \
+print "create tennis_men table"
+sql = "CREATE TABLE IF NOT EXISTS tennis_men " \
+      "(date DATE," \
+      " tournament VARCHAR(50)," \
+      " player1 VARCHAR(50)," \
+      " player2 VARCHAR(50)," \
+      " winner CHAR(1)," \
+      " score VARCHAR(50)," \
+      " player1_odds FLOAT," \
+      " player2_odds FLOAT," \
+      "PRIMARY KEY (date ,player1, player2));"
+cursor.execute(sql)
+
+print "create tennis_women table"
+sql = "CREATE TABLE IF NOT EXISTS tennis_women " \
       "(date DATE," \
       " tournament VARCHAR(50)," \
       " player1 VARCHAR(50)," \
