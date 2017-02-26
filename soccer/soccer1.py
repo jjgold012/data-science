@@ -34,7 +34,6 @@ query = """INSERT IGNORE INTO soccer VALUES \
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(6, sheet.nrows):
     values = []
-    print r
     year = int(sheet.cell(r, 0).value)
     month= months[sheet.cell(r, 2).value]
     day  = int(sheet.cell(r, 1).value)
