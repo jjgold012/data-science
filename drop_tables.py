@@ -31,6 +31,11 @@ print "drop hockey table"
 sql = "DROP TABLE IF EXISTS hockey;"
 cursor.execute(sql)
 
-print "drop tennis table"
-sql = "DROP TABLE IF EXISTS tennis;"
+print "drop tennis_men table"
+sql = "DROP TABLE IF EXISTS tennis_men;"
 cursor.execute(sql)
+
+print "drop tennis_women table"
+sql = "DROP TABLE IF EXISTS tennis_women;"
+cursor.execute(sql)
+
