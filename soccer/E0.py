@@ -13,7 +13,7 @@ book = xlrd.open_workbook("E0.xlsx")
 sheet = book.sheet_by_name("E0")
 
 # Establish a MySQL connection
-database = pymysql.connect(host="localhost", user="root", passwd="admin", db="project", charset='utf8')
+database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')
 
 # Get the cursor, which is used to traverse the database, line by line
 cursor = database.cursor()
@@ -24,7 +24,7 @@ cursor.execute('SET character_set_connection=utf8;')
 
 # Create the INSERT INTO sql query
 query = """INSERT INTO soccer VALUES \
-(%s, %s, %s, %s, %s, %s, %s, %s, %s)
+(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 
@@ -32,7 +32,7 @@ query = """INSERT INTO soccer VALUES \
 for r in range(2, sheet.nrows):
     values = []
     print(r)
-        
+
     for i in (1, 2, 3, 6, 4,5):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
@@ -48,14 +48,15 @@ for r in range(2, sheet.nrows):
         values.append(sheet.cell(r, i).value)
     for i in range(23, 44):
         values.append(sheet.cell(r, i).value)
-    
-    cursor.execute(query, values[:9])
-    cursor.execute(query, values[:6]+values[9:12])
-    cursor.execute(query, values[:6]+values[12:15])
-    cursor.execute(query, values[:6]+values[15:18])
-    cursor.execute(query, values[:6]+values[18:21])
-    cursor.execute(query, values[:6]+values[21:24])
-    cursor.execute(query, values[:6]+values[24:27])
+    values.insert(1, sheet.cell(r, 0).value)
+    print values
+    cursor.execute(query, values[:10])
+    cursor.execute(query, values[:7]+values[10:13])
+    cursor.execute(query, values[:7]+values[13:16])
+    cursor.execute(query, values[:7]+values[16:19])
+    cursor.execute(query, values[:7]+values[19:22])
+    cursor.execute(query, values[:7]+values[22:25])
+    cursor.execute(query, values[:7]+values[25:28])
 
 # Close the cursor
 cursor.close()
