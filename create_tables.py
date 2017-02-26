@@ -104,7 +104,7 @@ sql = "CREATE TABLE IF NOT EXISTS hockey " \
       "PRIMARY KEY (date ,home_team, away_team));"
 cursor.execute(sql)
 
-print "create american tennis table"
+print "create tennis table"
 sql = "CREATE TABLE IF NOT EXISTS tennis " \
       "(date DATE," \
       " league VARCHAR(50)," \
