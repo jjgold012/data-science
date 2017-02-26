@@ -88,3 +88,31 @@ sql = "CREATE TABLE IF NOT EXISTS american_football " \
       " away_odds FLOAT," \
       "PRIMARY KEY (date ,home_team, away_team));"
 cursor.execute(sql)
+
+print "create hockey table"
+sql = "CREATE TABLE IF NOT EXISTS hockey " \
+      "(date DATE," \
+      " league VARCHAR(50)," \
+      " home_team VARCHAR(50)," \
+      " away_team VARCHAR(50)," \
+      " winner CHAR(1)," \
+      " home_score INT," \
+      " away_score INT," \
+      " home_odds FLOAT," \
+      " draw_odds FLOAT," \
+      " away_odds FLOAT," \
+      "PRIMARY KEY (date ,home_team, away_team));"
+cursor.execute(sql)
+
+print "create american tennis table"
+sql = "CREATE TABLE IF NOT EXISTS tennis " \
+      "(date DATE," \
+      " league VARCHAR(50)," \
+      " player1 VARCHAR(50)," \
+      " player2 VARCHAR(50)," \
+      " winner CHAR(1)," \
+      " score INT," \
+      " player1 FLOAT," \
+      " player2 FLOAT," \
+      "PRIMARY KEY (date ,home_team, away_team));"
+cursor.execute(sql)
