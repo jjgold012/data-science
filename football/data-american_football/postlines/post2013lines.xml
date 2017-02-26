@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<scores>
+<year>2013</year><league>NFL</league><season>Playoffs</season>
+<date day="2014-01-04">
+<game info="AFC Wild Card"><team tnum="1"><name>Kansas City Chiefs</name><score>44</score><site>V</site><line>-2.5</line><totline>46.5</totline></team>
+<team tnum="2"><name>Indianapolis Colts</name><score>45</score><site>H</site><line>2.5</line><totline>46.5</totline></team></game>
+<game info="NFC Wild Card"><team tnum="1"><name>New Orleans Saints</name><score>26</score><site>V</site><line>3</line><totline>53</totline></team>
+<team tnum="2"><name>Philadelphia Eagles</name><score>24</score><site>H</site><line>-3</line><totline>53</totline></team></game>
+</date>
+<date day="2014-01-05">
+<game info="AFC Wild Card"><team tnum="1"><name>San Diego Chargers</name><score>27</score><site>V</site><line>6</line><totline>48</totline></team>
+<team tnum="2"><name>Cincinnati Bengals</name><score>10</score><site>H</site><line>-6</line><totline>48</totline></team></game>
+<game info="NFC Wild Card"><team tnum="1"><name>San Francisco 49ers</name><score>23</score><site>V</site><line>-3</line><totline>46</totline></team>
+<team tnum="2"><name>Green Bay Packers</name><score>20</score><site>H</site><line>3</line><totline>46</totline></team></game>
+</date>
+<date day="2014-01-11">
+<game info="NFC Divisional Playoff"><team tnum="1"><name>New Orleans Saints</name><score>15</score><site>V</site><line>9</line><totline>44.5</totline></team>
+<team tnum="2"><name>Seattle Seahawks</name><score>23</score><site>H</site><line>-9</line><totline>44.5</totline></team></game>
+<game info="AFC Divisional Playoff"><team tnum="1"><name>Indianapolis Colts</name><score>22</score><site>V</site><line>7</line><totline>51</totline></team>
+<team tnum="2"><name>New England Patriots</name><score>43</score><site>H</site><line>-7</line><totline>51</totline></team></game>
+</date>
+<date day="2014-01-12">
+<game info="NFC Divisional Playoff"><team tnum="1"><name>San Francisco 49ers</name><score>23</score><site>V</site><line>-1</line><totline>41.5</totline></team>
+<team tnum="2"><name>Carolina Panthers</name><score>10</score><site>H</site><line>1</line><totline>41.5</totline></team></game>
+<game info="AFC Divisional Playoff"><team tnum="1"><name>San Diego Chargers</name><score>17</score><site>V</site><line>7.5</line><totline>54.5</totline></team>
+<team tnum="2"><name>Denver Broncos</name><score>24</score><site>H</site><line>-7.5</line><totline>54.5</totline></team></game>
+</date>
+<date day="2014-01-19">
+<game info="AFC Championship"><team tnum="1"><name>New England Patriots</name><score>16</score><site>V</site><line>5</line><totline>57</totline></team>
+<team tnum="2"><name>Denver Broncos</name><score>26</score><site>H</site><line>-5</line><totline>57</totline></team></game>
+<game info="NFC Championship"><team tnum="1"><name>San Francisco 49ers</name><score>17</score><site>V</site><line>4</line><totline>40.5</totline></team>
+<team tnum="2"><name>Seattle Seahawks</name><score>23</score><site>H</site><line>-4</line><totline>40.5</totline></team></game>
+</date>
+<date day="2014-02-02">
+<game info="Super Bowl XLVIII"><team tnum="1"><name>Seattle Seahawks</name><score>43</score><line>2.5</line><totline>48.5</totline></team>
+<team tnum="2"><name>Denver Broncos</name><score>8</score><line>-2.5</line><totline>48.5</totline></team></game>
+</date>
+</scores>

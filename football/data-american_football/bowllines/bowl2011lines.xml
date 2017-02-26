@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<scores>
+<year>2011</year><league>College Football</league><season>Bowls</season>
+<date day="2011-12-17">
+<game info="New Mexico Bowl"><team tnum="1"><name>Temple</name><score>37</score><line>-7.0</line></team>
+<team tnum="2"><name>Wyoming</name><score>15</score><line>7</line></team></game>
+<game info="Idaho Potato Bowl"><team tnum="1"><name>Utah State</name><score>23</score><line>0.0</line></team>
+<team tnum="2"><name>Ohio</name><score>24</score><line>0</line></team></game>
+<game info="New Orleans Bowl"><team tnum="1"><name>UL-Lafayette</name><score>32</score><line>5.5</line></team>
+<team tnum="2"><name>San Diego State</name><score>30</score><line>-5.5</line></team></game>
+</date>
+<date day="2011-12-20">
+<game info="St Petersburg Bowl"><team tnum="1"><name>Florida Intl</name><score>10</score><line>-4.0</line></team>
+<team tnum="2"><name>Marshall</name><score>20</score><line>4</line></team></game>
+</date>
+<date day="2011-12-21">
+<game info="Poinsettia Bowl"><team tnum="1"><name>Louisiana Tech</name><score>24</score><line>10.0</line></team>
+<team tnum="2"><name>Texas Christian</name><score>31</score><line>-10</line></team></game>
+</date>
+<date day="2011-12-22">
+<game info="Maaco Las Vegas Bowl"><team tnum="1"><name>Arizona State</name><score>24</score><line>14.5</line></team>
+<team tnum="2"><name>Boise State</name><score>56</score><line>-14.5</line></team></game>
+</date>
+<date day="2011-12-24">
+<game info="Hawaii Bowl"><team tnum="1"><name>Nevada-Reno</name><score>17</score><line>7.5</line></team>
+<team tnum="2"><name>Southern Miss</name><score>24</score><line>-7.5</line></team></game>
+</date>
+<date day="2011-12-26">
+<game info="Independence Bowl"><team tnum="1"><name>North Carolina</name><score>24</score><line>5.0</line></team>
+<team tnum="2"><name>Missouri</name><score>41</score><line>-5</line></team></game>
+</date>
+<date day="2011-12-27">
+<game info="Little Caesars Bowl"><team tnum="1"><name>Western Michigan</name><score>32</score><line>1.0</line></team>
+<team tnum="2"><name>Purdue</name><score>37</score><line>-1</line></team></game>
+<game info="Belk Bowl"><team tnum="1"><name>Louisville</name><score>24</score><line>2.0</line></team>
+<team tnum="2"><name>No Carolina State</name><score>31</score><line>-2</line></team></game>
+</date>
+<date day="2011-12-28">
+<game info="Military Bowl"><team tnum="1"><name>Toledo</name><score>42</score><line>-3.5</line></team>
+<team tnum="2"><name>Air Force</name><score>41</score><line>3.5</line></team></game>
+<game info="Holiday Bowl"><team tnum="1"><name>California</name><score>10</score><line>3.5</line></team>
+<team tnum="2"><name>Texas</name><score>21</score><line>-3.5</line></team></game>
+</date>
+<date day="2011-12-29">
+<game info="Champs Sports Bowl"><team tnum="1"><name>Notre Dame</name><score>14</score><line>3.0</line></team>
+<team tnum="2"><name>Florida State</name><score>18</score><line>-3</line></team></game>
+<game info="Alamo Bowl"><team tnum="1"><name>Washington</name><score>56</score><line>8.5</line></team>
+<team tnum="2"><name>Baylor</name><score>67</score><line>-8.5</line></team></game>
+</date>
+<date day="2011-12-30">
+<game info="Armed Forces Bowl"><team tnum="1"><name>Tulsa</name><score>21</score><line>-2.5</line></team>
+<team tnum="2"><name>Brigham Young</name><score>24</score><line>2.5</line></team></game>
+<game info="Pinstripe Bowl"><team tnum="1"><name>Rutgers</name><score>27</score><line>2.0</line></team>
+<team tnum="2"><name>Iowa State</name><score>13</score><line>-2</line></team></game>
+<game info="Music City Bowl"><team tnum="1"><name>Wake Forest</name><score>17</score><line>7.0</line></team>
+<team tnum="2"><name>Mississippi State</name><score>23</score><line>-7</line></team></game>
+<game info="Insight Bowl"><team tnum="1"><name>Iowa</name><score>14</score><line>14.0</line></team>
+<team tnum="2"><name>Oklahoma</name><score>31</score><line>-14</line></team></game>
+</date>
+<date day="2011-12-31">
+<game info="Meineke Car Care Texas Bowl"><team tnum="1"><name>Texas A+M</name><score>33</score><line>-8.5</line></team>
+<team tnum="2"><name>Northwestern</name><score>22</score><line>8.5</line></team></game>
+<game info="Sun Bowl"><team tnum="1"><name>Utah</name><score>30</score><line>2.0</line></team>
+<team tnum="2"><name>Georgia Tech</name><score>27</score><line>-2</line></team></game>
+<game info="Fight Hunger Bowl"><team tnum="1"><name>U.C.L.A.</name><score>14</score><line>2.5</line></team>
+<team tnum="2"><name>Illinois</name><score>20</score><line>-2.5</line></team></game>
+<game info="Liberty Bowl"><team tnum="1"><name>Cincinnati</name><score>31</score><line>1.0</line></team>
+<team tnum="2"><name>Vanderbilt</name><score>24</score><line>-1</line></team></game>
+<game info="Chick-fil-A Bowl"><team tnum="1"><name>Virginia</name><score>24</score><line>2.5</line></team>
+<team tnum="2"><name>Auburn</name><score>43</score><line>-2.5</line></team></game>
+</date>
+<date day="2012-01-02">
+<game info="TicketCity Bowl"><team tnum="1"><name>Penn State</name><score>14</score><line>6.5</line></team>
+<team tnum="2"><name>Houston</name><score>30</score><line>-6.5</line></team></game>
+<game info="Outback Bowl"><team tnum="1"><name>Michigan State</name><score>33</score><line>2.5</line></team>
+<team tnum="2"><name>Georgia</name><score>30</score><line>-2.5</line></team></game>
+<game info="Capital One Bowl"><team tnum="1"><name>Nebraska</name><score>13</score><line>3.0</line></team>
+<team tnum="2"><name>South Carolina</name><score>30</score><line>-3</line></team></game>
+<game info="Gator Bowl"><team tnum="1"><name>Florida</name><score>24</score><line>-3.0</line></team>
+<team tnum="2"><name>Ohio State</name><score>17</score><line>3</line></team></game>
+<game info="Rose Bowl"><team tnum="1"><name>Wisconsin</name><score>38</score><line>4.5</line></team>
+<team tnum="2"><name>Oregon</name><score>45</score><line>-4.5</line></team></game>
+<game info="Fiesta Bowl"><team tnum="1"><name>Stanford</name><score>38</score><line>5.0</line></team>
+<team tnum="2"><name>Oklahoma State</name><score>41</score><line>-5</line></team></game>
+</date>
+<date day="2012-01-03">
+<game info="Sugar Bowl"><team tnum="1"><name>Michigan</name><score> </score><line>-3.0</line></team>
+<team tnum="2"><name>Virginia Tech</name><score> </score><line>3</line></team></game>
+</date>
+<date day="2012-01-04">
+<game info="Orange Bowl"><team tnum="1"><name>West Virginia</name><score> </score><line>3.0</line></team>
+<team tnum="2"><name>Clemson</name><score> </score><line>-3</line></team></game>
+</date>
+<date day="2012-01-06">
+<game info="Cotton Bowl"><team tnum="1"><name>Kansas State</name><score> </score><line>7.5</line></team>
+<team tnum="2"><name>Arkansas</name><score> </score><line>-7.5</line></team></game>
+</date>
+<date day="2012-01-07">
+<game info="Compass Bowl"><team tnum="1"><name>S-M-U</name><score> </score><line>3.0</line></team>
+<team tnum="2"><name>Pittsburgh</name><score> </score><line>-3</line></team></game>
+</date>
+<date day="2012-01-08">
+<game info="GoDaddy.com Bowl"><team tnum="1"><name>Arkansas State</name><score> </score><line>-1.5</line></team>
+<team tnum="2"><name>Northern Illinois</name><score> </score><line>1.5</line></team></game>
+</date>
+<date day="2012-01-09">
+<game info="BCS Title Game"><team tnum="1"><name>Alabama</name><score> </score><line>-1.0</line></team>
+<team tnum="2"><name>Louisiana State</name><score> </score><line>1</line></team></game>
+</date>
+</scores>

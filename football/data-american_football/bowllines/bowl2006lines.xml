@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<scores>
+<league>College Football</league><year>2006</year><season>Bowls</season>
+<date day="2006-12-19">
+<game info="Poinsettia Bowl"> 
+<team tnum="1"><name>Northern Illinois</name><score>7</score><line>12.0</line></team>
+<team tnum="2"><name>Texas Christian</name><score>37</score><line>-12</line></team>
+</game>
+</date>
+<date day="2006-12-21">
+<game info="Las Vegas Bowl"> 
+<team tnum="1"><name>Oregon</name><score>8</score><line>3.0</line></team>
+<team tnum="2"><name>Brigham Young</name><score>38</score><line>-3</line></team>
+</game>
+</date>
+<date day="2006-12-22">
+<game info="New Orleans Bowl"> 
+<team tnum="1"><name>Rice</name><score>17</score><line>-5.5</line></team>
+<team tnum="2"><name>Troy</name><score>41</score><line>5.5</line></team>
+</game>
+</date>
+<date day="2006-12-23">
+<game info="PapaJohns.com Bowl"> 
+<team tnum="1"><name>East Carolina</name><score>7</score><line>4.5</line></team>
+<team tnum="2"><name>South Florida</name><score>24</score><line>-4.5</line></team>
+</game>
+<game info="New Mexico Bowl"> 
+<team tnum="1"><name>San Jose State</name><score>20</score><line>3.5</line></team>
+<team tnum="2"><name>New Mexico</name><score>12</score><line>-3.5</line></team>
+</game>
+<game info="Armed Forces Bowl"> 
+<team tnum="1"><name>Tulsa</name><score>13</score><line>2.5</line></team>
+<team tnum="2"><name>Utah</name><score>25</score><line>-2.5</line></team>
+</game>
+</date>
+<date day="2006-12-24">
+<game info="Hawaii Bowl"> 
+<team tnum="1"><name>Arizona State</name><score>24</score><line>9.0</line></team>
+<team tnum="2"><name>Hawaii</name><score>41</score><line>-9</line></team>
+</game>
+</date>
+<date day="2006-12-26">
+<game info="Motor City Bowl"> 
+<team tnum="1"><name>Middle Tennessee</name><score>14</score><line>8.5</line></team>
+<team tnum="2"><name>Central Michigan</name><score>31</score><line>-8.5</line></team>
+</game>
+</date>
+<date day="2006-12-27">
+<game info="Emerald Bowl"> 
+<team tnum="1"><name>Florida State</name><score>44</score><line>3.5</line></team>
+<team tnum="2"><name>U.C.L.A.</name><score>27</score><line>-3.5</line></team>
+</game>
+</date>
+<date day="2006-12-28">
+<game info="Independence Bowl"> 
+<team tnum="1"><name>Oklahoma State</name><score>34</score><line>-2.0</line></team>
+<team tnum="2"><name>Alabama</name><score>31</score><line>2</line></team>
+</game>
+<game info="Texas Bowl"> 
+<team tnum="1"><name>Kansas State</name><score>10</score><line>9.0</line></team>
+<team tnum="2"><name>Rutgers</name><score>37</score><line>-9</line></team>
+</game>
+<game info="Holiday Bowl"> 
+<team tnum="1"><name>Texas A+M</name><score>10</score><line>3.0</line></team>
+<team tnum="2"><name>California</name><score>45</score><line>-3</line></team>
+</game>
+</date>
+<date day="2006-12-29">
+<game info="Music City Bowl"> 
+<team tnum="1"><name>Kentucky</name><score>28</score><line>11.5</line></team>
+<team tnum="2"><name>Clemson</name><score>20</score><line>-11.5</line></team>
+</game>
+<game info="Sun Bowl"> 
+<team tnum="1"><name>Missouri</name><score>38</score><line>3.5</line></team>
+<team tnum="2"><name>Oregon State</name><score>39</score><line>-3.5</line></team>
+</game>
+<game info="Liberty Bowl"> 
+<team tnum="1"><name>Houston</name><score>36</score><line>4.5</line></team>
+<team tnum="2"><name>South Carolina</name><score>44</score><line>-4.5</line></team>
+</game>
+<game info="Champs Sports Bowl"> 
+<team tnum="1"><name>Purdue</name><score>7</score><line>-1.0</line></team>
+<team tnum="2"><name>Maryland</name><score>24</score><line>1</line></team>
+</game>
+<game info="Insight Bowl"> 
+<team tnum="1"><name>Minnesota</name><score>41</score><line>8.5</line></team>
+<team tnum="2"><name>Texas Tech</name><score>44</score><line>-8.5</line></team>
+</game>
+</date>
+<date day="2006-12-30">
+<game info="Meineke Car Care Bowl"> 
+<team tnum="1"><name>Navy</name><score>24</score><line>8.0</line></team>
+<team tnum="2"><name>Boston College</name><score>25</score><line>-8</line></team>
+</game>
+<game info="Alamo Bowl"> 
+<team tnum="1"><name>Iowa</name><score>24</score><line>9.0</line></team>
+<team tnum="2"><name>Texas</name><score>26</score><line>-9</line></team>
+</game>
+<game info="Chick-fil-A Bowl"> 
+<team tnum="1"><name>Virginia Tech</name><score>24</score><line>-3.0</line></team>
+<team tnum="2"><name>Georgia</name><score>31</score><line>3</line></team>
+</game>
+</date>
+<date day="2006-12-31">
+<game info="MPC Computers Bowl"> 
+<team tnum="1"><name>Nevada-Reno</name><score>20</score><line>3.5</line></team>
+<team tnum="2"><name>Miami-Florida</name><score>21</score><line>-3.5</line></team>
+</game>
+</date>
+<date day="2007-01-01">
+<game info="Cotton Bowl"> 
+<team tnum="1"><name>Nebraska</name><score>14</score><line>2.0</line></team>
+<team tnum="2"><name>Auburn</name><score>17</score><line>-2</line></team>
+</game>
+<game info="Outback Bowl"> 
+<team tnum="1"><name>Penn State</name><score>20</score><line>4.0</line></team>
+<team tnum="2"><name>Tennessee</name><score>10</score><line>-4</line></team>
+</game>
+<game info="Capital One Bowl"> 
+<team tnum="1"><name>Wisconsin</name><score>17</score><line>2.0</line></team>
+<team tnum="2"><name>Arkansas</name><score>14</score><line>-2</line></team>
+</game>
+<game info="Gator Bowl"> 
+<team tnum="1"><name>Georgia Tech</name><score>35</score><line>9.0</line></team>
+<team tnum="2"><name>West Virginia</name><score>38</score><line>-9</line></team>
+</game>
+<game info="Rose Bowl"> 
+<team tnum="1"><name>Michigan</name><score>18</score><line>-2.0</line></team>
+<team tnum="2"><name>Southern Cal</name><score>32</score><line>2</line></team>
+</game>
+<game info="Fiesta Bowl"> 
+<team tnum="1"><name>Boise State</name><score>43</score><line>7.5</line></team>
+<team tnum="2"><name>Oklahoma</name><score>42</score><line>-7.5</line></team>
+</game>
+</date>
+<date day="2007-01-02">
+<game info="Orange Bowl"> 
+<team tnum="1"><name>Wake Forest</name><score>13</score><line>10.0</line></team>
+<team tnum="2"><name>Louisville</name><score>24</score><line>-10</line></team>
+</game>
+</date>
+<date day="2007-01-03">
+<game info="Sugar Bowl"> 
+<team tnum="1"><name>Notre Dame</name><score>14</score><line>9.0</line></team>
+<team tnum="2"><name>Louisiana State</name><score>41</score><line>-9</line></team>
+</game>
+</date>
+<date day="2007-01-06">
+<game info="International Bowl"> 
+<team tnum="1"><name>Western Michigan</name><score>24</score><line>7.5</line></team>
+<team tnum="2"><name>Cincinnati</name><score>27</score><line>-7.5</line></team>
+</game>
+</date>
+<date day="2007-01-07">
+<game info="GMAC Bowl"> 
+<team tnum="1"><name>Ohio</name><score>7</score><line>6.0</line></team>
+<team tnum="2"><name>Southern Miss</name><score>28</score><line>-6</line></team>
+</game>
+</date>
+</scores>

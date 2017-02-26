@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<scores>
+<league>College Football</league><year>1998</year><season>Bowls</season>
+<date day="1998-12-19">
+<game info="Las Vegas Bowl"> 
+<team tnum="1"><name>North Carolina</name><score>20</score><line>-7.0</line></team>
+<team tnum="2"><name>San Diego State</name><score>13</score><line>7</line></team>
+</game>
+</date>
+<date day="1998-12-23">
+<game info="Motor City Bowl"> 
+<team tnum="1"><name>Louisville</name><score>29</score><line>-3.5</line></team>
+<team tnum="2"><name>Marshall</name><score>48</score><line>3.5</line></team>
+</game>
+</date>
+<date day="1998-12-25">
+<game info="Aloha Bowl"> 
+<team tnum="1"><name>Colorado</name><score>51</score><line>5.5</line></team>
+<team tnum="2"><name>Oregon</name><score>43</score><line>-5.5</line></team>
+</game>
+<game info="Oahu Bowl"> 
+<team tnum="1"><name>Air Force</name><score>45</score><line>-3.5</line></team>
+<team tnum="2"><name>Washington</name><score>25</score><line>3.5</line></team>
+</game>
+</date>
+<date day="1998-12-26">
+<game info="Insight Bowl"> 
+<team tnum="1"><name>West Virginia</name><score>31</score><line>3.5</line></team>
+<team tnum="2"><name>Missouri</name><score>34</score><line>-3.5</line></team>
+</game>
+</date>
+<date day="1998-12-29">
+<game info="Music City Bowl"> 
+<team tnum="1"><name>Alabama</name><score>7</score><line>5.0</line></team>
+<team tnum="2"><name>Virginia Tech</name><score>38</score><line>-5</line></team>
+</game>
+<game info="Micron PC Bowl"> 
+<team tnum="1"><name>No Carolina State</name><score>23</score><line>7.0</line></team>
+<team tnum="2"><name>Miami-Florida</name><score>46</score><line>-7</line></team>
+</game>
+<game info="Alamo Bowl"> 
+<team tnum="1"><name>Kansas State</name><score>34</score><line>-12.5</line></team>
+<team tnum="2"><name>Purdue</name><score>37</score><line>12.5</line></team>
+</game>
+</date>
+<date day="1998-12-30">
+<game info="Humanitarian Bowl"> 
+<team tnum="1"><name>Southern Miss</name><score>35</score><line>-15.5</line></team>
+<team tnum="2"><name>Idaho</name><score>42</score><line>15.5</line></team>
+</game>
+<game info="Holiday Bowl"> 
+<team tnum="1"><name>Arizona</name><score>23</score><line>3.0</line></team>
+<team tnum="2"><name>Nebraska</name><score>20</score><line>-3</line></team>
+</game>
+</date>
+<date day="1998-12-31">
+<game info="Liberty Bowl"> 
+<team tnum="1"><name>Brigham Young</name><score>27</score><line>7.0</line></team>
+<team tnum="2"><name>Tulane</name><score>41</score><line>-7</line></team>
+</game>
+<game info="Sun Bowl"> 
+<team tnum="1"><name>Texas Christian</name><score>28</score><line>16.0</line></team>
+<team tnum="2"><name>Southern Cal</name><score>19</score><line>-16</line></team>
+</game>
+<game info="Peach Bowl"> 
+<team tnum="1"><name>Georgia</name><score>35</score><line>2.0</line></team>
+<team tnum="2"><name>Virginia</name><score>33</score><line>-2</line></team>
+</game>
+<game info="Independence Bowl"> 
+<team tnum="1"><name>Texas Tech</name><score>18</score><line>-9.5</line></team>
+<team tnum="2"><name>Mississippi</name><score>35</score><line>9.5</line></team>
+</game>
+</date>
+<date day="1999-01-01">
+<game info="Outback Bowl"> 
+<team tnum="1"><name>Penn State</name><score>26</score><line>-6.5</line></team>
+<team tnum="2"><name>Kentucky</name><score>14</score><line>6.5</line></team>
+</game>
+<game info="Gator Bowl"> 
+<team tnum="1"><name>Notre Dame</name><score>28</score><line>1.5</line></team>
+<team tnum="2"><name>Georgia Tech</name><score>35</score><line>-1.5</line></team>
+</game>
+<game info="Citrus Bowl"> 
+<team tnum="1"><name>Michigan</name><score>45</score><line>-3.0</line></team>
+<team tnum="2"><name>Arkansas</name><score>31</score><line>3</line></team>
+</game>
+<game info="Cotton Bowl"> 
+<team tnum="1"><name>Texas</name><score>38</score><line>-6.5</line></team>
+<team tnum="2"><name>Mississippi State</name><score>11</score><line>6.5</line></team>
+</game>
+<game info="Rose Bowl"> 
+<team tnum="1"><name>U.C.L.A.</name><score>31</score><line>-9.5</line></team>
+<team tnum="2"><name>Wisconsin</name><score>38</score><line>9.5</line></team>
+</game>
+<game info="Sugar Bowl"> 
+<team tnum="1"><name>Ohio State</name><score>24</score><line>-12.5</line></team>
+<team tnum="2"><name>Texas A+M</name><score>14</score><line>12.5</line></team>
+</game>
+</date>
+<date day="1999-01-02">
+<game info="Orange Bowl"> 
+<team tnum="1"><name>Syracuse</name><score>10</score><line>7.5</line></team>
+<team tnum="2"><name>Florida</name><score>31</score><line>-7.5</line></team>
+</game>
+</date>
+<date day="1999-01-04">
+<game info="Fiesta Bowl"> 
+<team tnum="1"><name>Florida State</name><score>16</score><line>-5.0</line></team>
+<team tnum="2"><name>Tennessee</name><score>23</score><line>5</line></team>
+</game>
+</date>
+</scores>
