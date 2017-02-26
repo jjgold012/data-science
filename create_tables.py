@@ -107,7 +107,7 @@ cursor.execute(sql)
 print "create tennis table"
 sql = "CREATE TABLE IF NOT EXISTS tennis " \
       "(date DATE," \
-      " league VARCHAR(50)," \
+      " tournament VARCHAR(50)," \
       " player1 VARCHAR(50)," \
       " player2 VARCHAR(50)," \
       " winner CHAR(1)," \
