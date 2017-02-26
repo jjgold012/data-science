@@ -10,8 +10,8 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
-book = xlrd.open_workbook("2002m.xls")
-sheet = book.sheet_by_name("2002")
+book = xlrd.open_workbook("2003m.xls")
+sheet = book.sheet_by_name("2003")
 
 # Establish a MySQL connection
 database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')
@@ -37,7 +37,7 @@ for r in range(1, sheet.nrows):
                                                                   book.datemode)
     py_date = datetime.datetime(year, month, day, hour, minute, second)
     values.append(py_date)
-    for i in (2,9, 10,23,24,32,33):
+    for i in (2,9, 10,23,24,30,31):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
             continue
