@@ -53,19 +53,19 @@
       <file leaf-file-name="create_tables.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="106" column="13" lean-forward="false" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+            <state relative-caret-position="403">
+              <caret line="113" column="25" lean-forward="false" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
               <folding>
-                <marker date="1488117836000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
-                <marker date="1488117836000" expanded="true" signature="3132:3436" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
+                <marker date="1488117884000" expanded="true" signature="3132:3444" ph="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
@@ -961,7 +961,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488115568747</updated>
-      <workItem from="1488115570138" duration="1574000" />
+      <workItem from="1488115570138" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1488115617849</created>
@@ -984,11 +984,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488117759275</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added tennis table">
+      <created>1488117849950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488117849950</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1574000" />
+    <option name="totallyTimeSpent" value="1615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
@@ -1053,19 +1060,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create_tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="106" column="13" lean-forward="false" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+        <state relative-caret-position="403">
+          <caret line="113" column="25" lean-forward="false" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
           <folding>
-            <marker date="1488117836000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
-            <marker date="1488117836000" expanded="true" signature="3132:3436" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
+            <marker date="1488117884000" expanded="true" signature="3132:3444" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>

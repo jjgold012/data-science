@@ -111,7 +111,7 @@ sql = "CREATE TABLE IF NOT EXISTS tennis " \
       " player1 VARCHAR(50)," \
       " player2 VARCHAR(50)," \
       " winner CHAR(1)," \
-      " score INT," \
+      " score VARCHAR(50)," \
       " player1 FLOAT," \
       " player2 FLOAT," \
       "PRIMARY KEY (date ,home_team, away_team));"
