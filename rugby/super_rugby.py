@@ -13,7 +13,7 @@ book = xlrd.open_workbook("super_rugby.xlsx")
 sheet = book.sheet_by_name("Data")
 
 # Establish a MySQL connection
-database = pymysql.connect(host="localhost", user="root", passwd="admin", db="project")
+database = pymysql.connect(host="localhost", user="root", db="project")
 
 # Get the cursor, which is used to traverse the database, line by line
 cursor = database.cursor()
