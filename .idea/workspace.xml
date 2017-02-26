@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2fa49e5c-5ee8-4a8d-9338-09bc1706150e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_tables.py" afterPath="$PROJECT_DIR$/create_tables.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,19 +52,19 @@
       <file leaf-file-name="create_tables.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="1695">
               <caret line="113" column="25" lean-forward="false" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
               <folding>
-                <marker date="1488117884000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
-                <marker date="1488117884000" expanded="true" signature="3132:3444" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
+                <marker date="1488120831000" expanded="true" signature="3132:3454" ph="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
@@ -74,6 +73,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -156,48 +156,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ice hockey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data-science" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data-science" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hockey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data-science" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data-science" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basketball" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data-science" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data-science" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -217,6 +175,118 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/drop_tables.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/remove_db.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/tennis/2002.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -961,7 +1031,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488115568747</updated>
-      <workItem from="1488115570138" duration="1615000" />
+      <workItem from="1488115570138" duration="3110000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1488115617849</created>
@@ -991,15 +1061,22 @@
       <option name="project" value="LOCAL" />
       <updated>1488117849950</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added tennis table">
+      <created>1488117891057</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1488117891057</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1615000" />
+    <option name="totallyTimeSpent" value="3110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1020,9 +1097,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -1060,19 +1137,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create_tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="1695">
           <caret line="113" column="25" lean-forward="false" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
           <folding>
-            <marker date="1488117884000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
-            <marker date="1488117884000" expanded="true" signature="3132:3444" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="171:543" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="601:972" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="1044:1401" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="1464:1812" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="1872:2217" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="2287:2642" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="2701:2965" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="2701:2993" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="2701:3073" ph="CREATE TABLE... IF" />
+            <marker date="1488120831000" expanded="true" signature="3132:3454" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
