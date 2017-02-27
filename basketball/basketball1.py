@@ -36,6 +36,8 @@ rows = 0
 
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(4, sheet.nrows):
+    if (not sheet.cell(r, 0).value or not sheet.cell(r, 2).value or not  sheet.cell(r, 1).value):
+        continue
     values = []
     year = int(sheet.cell(r, 0).value)
     month= months[sheet.cell(r, 2).value]
@@ -48,6 +50,7 @@ for r in range(4, sheet.nrows):
             continue
         values.append(sheet.cell(r, i).value)
     values.insert(1, sheet.cell(r, 5).value)
+
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         rows += cursor.execute(query, values)
