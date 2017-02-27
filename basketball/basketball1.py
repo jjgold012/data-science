@@ -45,7 +45,6 @@ for r in range(4, sheet.nrows):
             continue
         values.append(sheet.cell(r, i).value)
     values.insert(1, sheet.cell(r, 5).value)
-    print values
     cursor.execute(query, values)
 
 # Close the cursor

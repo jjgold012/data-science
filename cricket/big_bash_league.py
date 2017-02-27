@@ -30,7 +30,6 @@ query = """INSERT IGNORE INTO cricket  VALUES \
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(1, sheet.nrows):
     values = []
-    print(r)
     for i in (0, 2,3,9,12,15,18,19):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
