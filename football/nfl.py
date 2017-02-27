@@ -39,10 +39,11 @@ for r in range(1, sheet.nrows):
             continue
         if (i == 0):
             ms_date_number = sheet.cell(r, i).value # Correct option 2
+            
             year, month, day, hour, minute, second = xlrd.xldate_as_tuple(ms_date_number,
             book.datemode)
             py_date = datetime.datetime(year, month, day, hour, minute, second)
-            print py_date
+
             values.append(py_date)
             continue
         values.append(sheet.cell(r, i).value)
