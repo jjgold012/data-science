@@ -32,16 +32,21 @@ query = """INSERT IGNORE INTO american_football VALUES \
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(1, sheet.nrows):
     values = []
-    print r
     for i in (0, 1,2, 3,4, 8,12):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
             continue
         if (i == 0):
             ms_date_number = sheet.cell(r, i).value # Correct option 2
-            
-            year, month, day, hour, minute, second = xlrd.xldate_as_tuple(ms_date_number,
-            book.datemode)
+            if (type(ms_date_number) is not float):
+                ms_date_number = ms_date_number.split('-')
+                year = int(ms_date_number[0])
+                month = int(ms_date_number[1])
+                day = int(ms_date_number[2])
+                hour = minute = second = 0
+            else:
+                year, month, day, hour, minute, second = xlrd.xldate_as_tuple(ms_date_number,
+                book.datemode)
             py_date = datetime.datetime(year, month, day, hour, minute, second)
 
             values.append(py_date)
