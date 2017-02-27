@@ -7,6 +7,8 @@ Created on Mon Feb  6 12:14:09 2017
 import datetime
 import pymysql.cursors
 import csv
+import warnings
+
 from os import listdir
 from os.path import isfile, join
 # Establish a MySQL connection
@@ -23,6 +25,7 @@ cursor.execute('SET character_set_connection=utf8;')
 query = """INSERT IGNORE INTO american_football VALUES \
 (%s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
+rows = 0
 
 dir = "data-american_football"
 files = [dir+"/"+f for f in listdir(dir) if (isfile(join(dir, f)) and f.endswith('csv'))]
@@ -49,7 +52,9 @@ for f in files:
         values[len(values)-2] = -float(values[len(values)-2]) if values[len(values)-2] is not None else None
         if (values[5] is None or values[6] is None):
             continue
-        cursor.execute(query, values)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            rows += cursor.execute(query, values)
 
 # Close the cursor
 cursor.close()
@@ -61,7 +66,5 @@ database.commit()
 database.close()
 
 # Print results
-print("")
-print("All Done! Bye, for now.")
-print("")
+print("I just imported " + str(rows) + " rows to MySQL!")
 

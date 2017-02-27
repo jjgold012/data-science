@@ -7,6 +7,8 @@ Created on Mon Feb  6 12:14:09 2017
 import datetime
 import xlrd
 import pymysql.cursors
+import warnings
+
 
 # Open the workbook and define the worksheet
 
@@ -28,7 +30,7 @@ query = """INSERT IGNORE INTO australian_football  VALUES \
 (%s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
-
+rows = 0
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(2, sheet.nrows):
     values = []
@@ -52,6 +54,10 @@ for r in range(2, sheet.nrows):
         values.insert(3, 'A')
     values.insert(1, 'AFL')
     cursor.execute(query, values)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        rows += cursor.execute(query, values)
+
 
 # Close the cursor
 cursor.close()
@@ -63,9 +69,5 @@ database.commit()
 database.close()
 
 # Print results
-print("")
-print("All Done! Bye, for now.")
-print("")
-columns = str(sheet.ncols)
-rows = str(sheet.nrows)
-print("I just imported", columns, " columns and", rows, "rows to MySQL!")
+
+print("I just imported " + str(rows) + " rows to MySQL!")

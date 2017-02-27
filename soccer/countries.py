@@ -1,7 +1,7 @@
 import csv
 import pymysql.cursors
 import os
-import datetime
+import warnings
 
 
 
@@ -20,6 +20,7 @@ cursor.execute('SET character_set_connection=utf8;')
 query = """INSERT IGNORE INTO soccer VALUES \
 (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
+rows = 0
 
 abbrDict = {'HT':'HomeTeam', 'AT':'AwayTeam'}
 dir = "soccer - countries"
@@ -54,7 +55,9 @@ for filename in os.listdir(dir):
                 values.append(py_date)
                 continue
             values.append(row[i])
-        cursor.execute(query, values)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            rows += cursor.execute(query, values)
     f.close()
 
 # Close the cursor
@@ -67,9 +70,8 @@ database.commit()
 database.close()
 
 # Print results
-print("")
-print("All Done! Bye, for now.")
-print("")
+print("I just imported " + str(rows) + " rows to MySQL!")
+
 
 
 

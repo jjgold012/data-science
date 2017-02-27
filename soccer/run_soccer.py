@@ -1,4 +1,10 @@
-files_to_run = [r"E0.py", r"soccer1.py", r"spain-01-archive.py", r"countries.py"]
+files_to_run = [r"soccer1.py", r"spain-01-archive.py", r"countries.py"]
+
+print "inserting soccer data ..."
+print ""
 
 for file in files_to_run:
     execfile(file)
+print ""
+
+print "Finished"
