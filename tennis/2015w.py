@@ -10,8 +10,8 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
-book = xlrd.open_workbook("2012w.xls")
-sheet = book.sheet_by_name("Sheet1")
+book = xlrd.open_workbook("2015w.xls")
+sheet = book.sheet_by_name("2015")
 
 # Establish a MySQL connection
 database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')

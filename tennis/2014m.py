@@ -10,8 +10,8 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
-book = xlrd.open_workbook("2012w.xls")
-sheet = book.sheet_by_name("Sheet1")
+book = xlrd.open_workbook("2014m.xls")
+sheet = book.sheet_by_name("2014")
 
 # Establish a MySQL connection
 database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')
@@ -24,7 +24,7 @@ cursor.execute('SET CHARACTER SET utf8;')
 cursor.execute('SET character_set_connection=utf8;')
 
 # Create the INSERT INTO sql query
-query = """INSERT IGNORE INTO tennis_women VALUES \
+query = """INSERT IGNORE INTO tennis_men VALUES \
 (%s, %s, %s, %s, %s, %s, %s, %s)
 """
 
@@ -37,7 +37,7 @@ for r in range(1, sheet.nrows):
                                                                   book.datemode)
     py_date = datetime.datetime(year, month, day, hour, minute, second)
     values.append(py_date)
-    for i in (2,9, 10,21,22,24,25):
+    for i in (2,9, 10,25,26,28,29):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
             continue
@@ -46,6 +46,7 @@ for r in range(1, sheet.nrows):
     values.insert(5, str(int(values[5] if values[5] is not None else 0)) + "-" + str(int(values[6] if values[6] is not None else 0)))
     values.pop(6)
     values.pop(6)
+
     cursor.execute(query, values)
 
 # Close the cursor
