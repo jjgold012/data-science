@@ -1,4 +1,4 @@
-files_to_run = [r"soccer1.py", r"spain-01-archive.py", r"countries.py"]
+files_to_run = [r"soccer1.py", r"countries.py"]
 
 print "inserting soccer data ..."
 print ""
