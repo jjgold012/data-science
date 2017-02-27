@@ -9,6 +9,7 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
+
 book = xlrd.open_workbook("afl.xls")
 sheet = book.sheet_by_name("Data")
 
