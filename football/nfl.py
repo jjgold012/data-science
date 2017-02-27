@@ -9,6 +9,7 @@ import xlrd
 import pymysql.cursors
 import re
 
+
 # Open the workbook and define the worksheet
 book = xlrd.open_workbook("nfl.xls")
 sheet = book.sheet_by_name("Data")
@@ -38,6 +39,7 @@ for r in range(1, sheet.nrows):
             continue
         if (i == 0):
             ms_date_number = sheet.cell(r, i).value # Correct option 2
+<<<<<<< Updated upstream
             if (type(ms_date_number) is not float):
                 ms_date_number = ms_date_number.split('-')
                 year = int(ms_date_number[0])
@@ -47,8 +49,12 @@ for r in range(1, sheet.nrows):
             else:
                 year, month, day, hour, minute, second = xlrd.xldate_as_tuple(ms_date_number,
                 book.datemode)
-            py_date = datetime.datetime(year, month, day, hour, minute, second)
+=======
 
+            year, month, day, hour, minute, second = xlrd.xldate_as_tuple(ms_date_number,
+            book.datemode)
+>>>>>>> Stashed changes
+            py_date = datetime.datetime(year, month, day, hour, minute, second)
             values.append(py_date)
             continue
         values.append(sheet.cell(r, i).value)
