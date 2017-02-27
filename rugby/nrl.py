@@ -9,11 +9,11 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
-book = xlrd.open_workbook("nrl.xlsx")
+book = xlrd.open_workbook("nrl.xls")
 sheet = book.sheet_by_name("Data")
 
 # Establish a MySQL connection
-database = pymysql.connect(host="localhost", user="root", passwd="admin", db="project", charset='utf8')
+database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')
 
 # Get the cursor, which is used to traverse the database, line by line
 cursor = database.cursor()
@@ -23,22 +23,20 @@ cursor.execute('SET CHARACTER SET utf8;')
 cursor.execute('SET character_set_connection=utf8;')
 
 # Create the INSERT INTO sql query
-query = """INSERT INTO soccer VALUES \
-(%s, %s, %s, %s, %s, %s, %s, %s, %s)
+query = """INSERT INTO rugby VALUES \
+(%s, %s, %s, %s, %s, %s, %s, %s, %s,%s)
 """
 
 
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(2, sheet.nrows):
     values = []
-    print(r)
-        
-    for i in (0, 2, 3, 4, 5, 8,9,10):
+    for i in (48, 2, 3, 4, 5, 8,9,10):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
             continue
         if sheet.cell(r, i).ctype == 3: # 3 means 'xldate' , 1 means 'text'
-            if (i == 0):
+            if (i == 48):
                 ms_date_number = sheet.cell(r, i).value # Correct option 2
                 year, month, day, hour, minute, second = xlrd.xldate_as_tuple(ms_date_number,
                 book.datemode)
@@ -52,7 +50,7 @@ for r in range(2, sheet.nrows):
         values.insert(3, 'D')
     else:
         values.insert(3, 'A')
-        
+    values.insert(1, 'NRL')
     cursor.execute(query, values)
 
 # Close the cursor
