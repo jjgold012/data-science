@@ -48,7 +48,6 @@ for r in range(4, sheet.nrows):
             continue
         values.append(sheet.cell(r, i).value)
     values.insert(1, sheet.cell(r, 5).value)
-    cursor.execute(query, values)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         rows += cursor.execute(query, values)

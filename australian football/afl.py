@@ -53,7 +53,6 @@ for r in range(2, sheet.nrows):
     else:
         values.insert(3, 'A')
     values.insert(1, 'AFL')
-    cursor.execute(query, values)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         rows += cursor.execute(query, values)
