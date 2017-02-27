@@ -9,11 +9,11 @@ import xlrd
 import pymysql.cursors
 
 # Open the workbook and define the worksheet
-book = xlrd.open_workbook("big_bash_league.xlsx")
+book = xlrd.open_workbook("big_bash_league.xls")
 sheet = book.sheet_by_name("Data")
 
 # Establish a MySQL connection
-database = pymysql.connect(host="localhost", user="root", passwd="admin", db="project", charset='utf8')
+database = pymysql.connect(host="localhost", user="root", db="project", charset='utf8')
 
 # Get the cursor, which is used to traverse the database, line by line
 cursor = database.cursor()

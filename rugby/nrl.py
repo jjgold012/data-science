@@ -31,7 +31,6 @@ query = """INSERT INTO rugby VALUES \
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 for r in range(2, sheet.nrows):
     values = []
-    print r
     for i in (48, 2, 3, 4, 5, 8,9,10):
         if (sheet.cell_type(r,i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK)):
             values.append(None)
