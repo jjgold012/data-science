@@ -1,0 +1,36 @@
+select * from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+
+select * from american_football where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from american_football where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from american_football;
+
+select * from basketball where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from basketball where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from basketball;
+
+select * from cricket where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from cricket where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from cricket;
+
+select * from hockey where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+
+select * from rugby where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+
+select * from tennis_men where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+
+select * from tennis_women where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+
+
+drop table american_football;
+
+
+
+
+
+
+
