@@ -82,3 +82,76 @@ select tournament, count(*) from tennis_women where player1 = 'Williams S.' or p
 INTO OUTFILE 'serena_tournaments.csv'
 FIELDS TERMINATED BY ',';
 
+################ TOP 10 WINNING HOME RUGBY ##############
+
+select h,c from(select home_team as h, count(*) as c from rugby where winner = 'H' group by home_team
+having count(*) >= 50) t
+INTO OUTFILE 'top10_winning_home.csv'
+FIELDS TERMINATED BY ',';
+
+################ TOP 10 LOSING AWAY RUGBY ##############
+
+select h,c from(select away_team as h, count(*) as c from rugby where winner = 'H' group by away_team
+having count(*) >= 50) t
+INTO OUTFILE 'top10_losing_away.csv'
+FIELDS TERMINATED BY ',';
+
+################ ODDS DIFFERENCE AT THE LEAST BASKETBALL ##############
+
+select count(*) from basketball where home_odds - away_odds >= 1 or home_odds - away_odds <= -1
+union
+select count(*) from basketball where home_odds - away_odds >= 2 or home_odds - away_odds <= -2
+union
+select count(*) from basketball where home_odds - away_odds >= 3 or home_odds - away_odds <= -3
+union
+select count(*) from basketball where home_odds - away_odds >= 4 or home_odds - away_odds <= -4
+union
+select count(*) from basketball where home_odds - away_odds >= 5 or home_odds - away_odds <= -5
+union
+select count(*) from basketball where home_odds - away_odds >= 6 or home_odds - away_odds <= -6
+union
+select count(*) from basketball where home_odds - away_odds >= 7 or home_odds - away_odds <= -7
+union
+select count(*) from basketball where home_odds - away_odds >= 8 or home_odds - away_odds <= -8
+INTO OUTFILE 'odds_diff.csv'
+FIELDS TERMINATED BY ',';
+
+################ SCORES DIFFERENCE AT THE LEAST BASKETBALL ##############
+
+select count(*) from basketball where home_score - away_score >= 10 or home_score - away_score <= -10
+union
+select count(*) from basketball where home_score - away_score >= 20 or home_score - away_score <= -20
+union
+select count(*) from basketball where home_score - away_score >= 30 or home_score - away_score <= -30
+union
+select count(*) from basketball where home_score - away_score >= 40 or home_score - away_score <= -40
+union
+select count(*) from basketball where home_score - away_score >= 50 or home_score - away_score <= -50
+INTO OUTFILE 'score_diff.csv'
+FIELDS TERMINATED BY ',';
+
+################ HOCKEY WINNER DISTRIBUTION ##############
+
+select 'H',count(*) from hockey where winner = 'H'
+union
+select 'D',count(*) from hockey where winner = 'D'
+union
+select 'A',count(*) from hockey where winner = 'A'
+union
+select 'total', count(*) from hockey
+INTO OUTFILE 'winner_distribution.csv'
+FIELDS TERMINATED BY ',';
+
+################ SELECTED TOTAL WINS CRICKET ##############
+
+select 'Sydney Thunder',count(*) from cricket where ((home_team = 'Sydney Thunder') and (winner = 'H')) or ((away_team = 'Sydney Thunder') and (winner = 'A'))
+union 
+select 'Melbourne Stars',count(*) from cricket where ((home_team = 'Melbourne Stars') and (winner = 'H')) or ((away_team = 'Melbourne Stars') and (winner = 'A'))
+union
+select 'Adelaide Strikers',count(*) from cricket where ((home_team = 'Adelaide Strikers') and (winner = 'H')) or ((away_team = 'Adelaide Strikers') and (winner = 'A'))
+union 
+select 'Perth Scorchers',count(*) from cricket where ((home_team = 'Perth Scorchers') and (winner = 'H')) or ((away_team = 'Perth Scorchers') and (winner = 'A'))
+union
+select 'Hobart Hurricanes',count(*) from cricket where ((home_team = 'Hobart Hurricanes') and (winner = 'H')) or ((away_team = 'Hobart Hurricanes') and (winner = 'A'))
+INTO OUTFILE 'winning_teams.csv'
+FIELDS TERMINATED BY ',';
