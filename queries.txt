@@ -1,36 +1,84 @@
+################ GENERAL QUERIES ##############
+
 select * from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
 
 select * from american_football where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from american_football where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
 select count(*) from american_football;
 
 select * from basketball where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from basketball where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
 select count(*) from basketball;
 
 select * from cricket where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from cricket where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
 select count(*) from cricket;
 
 select * from hockey where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from hockey;
 
 select * from rugby where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select count(*) from rugby;
 
-select * from tennis_men where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select * from tennis_men where player1_odds > player2_odds;
+select count(*) from tennis_men;
 
-select * from tennis_women where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
-select count(*) from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds);
+select * from tennis_women where player1_odds > player2_odds;
+select count(*) from tennis_women;
 
+################ WRONG PREDICTIONS - UNDERDOG ##############
 
-drop table american_football;
+select count(*), (select count(*) from soccer), 'soccer' from soccer where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from american_football), 'american_football' from american_football where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from australian_football), 'australian_football' from australian_football where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from basketball),'basketball' from basketball where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from cricket), 'cricket' from cricket where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from hockey), 'hockey' from hockey where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from rugby), 'rugby' from rugby where (winner = 'H' and away_odds < home_odds) or (winner = 'A' and away_odds > home_odds)
+union
+select count(*), (select count(*) from tennis_men), 'tennis_men' from tennis_men where player1_odds > player2_odds
+union
+select count(*), (select count(*) from tennis_women), 'tennis_women' from tennis_women where player1_odds > player2_odds
+INTO OUTFILE 'wrongPredictions.csv'
+FIELDS TERMINATED BY ',';
 
+################ MOST SUCCESSFUL TEAMS AT HOME BY SPORT ##############
 
+select 'soccer',h,c from(select home_team as h, count(*) as c from soccer where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from soccer s1 where s1.winner = 'H'  group by s1.home_team)) as t
+union
+select 'american_football',h,c from(select home_team as h, count(*) as c from american_football where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from american_football s1 where s1.winner = 'H'  group by s1.home_team)) as t
+union
+select 'australian_football',h,c from(select home_team as h, count(*) as c from australian_football where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from australian_football s1 where s1.winner = 'H'  group by s1.home_team)) as t
+union
+select 'basketball',h,c from(select home_team as h, count(*) as c from basketball where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from basketball s1 where s1.winner = 'H'  group by s1.home_team)) as t
+union
+select 'cricket',h,c from(select home_team as h, count(*) as c from cricket where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from cricket s1 where s1.winner = 'H'  group by s1.home_team)) as t
+union
+select 'hockey',h,c from(select home_team as h, count(*) as c from hockey where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from hockey s1 where s1.winner = 'H'  group by s1.home_team)) as t
+union
+select 'rugby',h,c from(select home_team as h, count(*) as c from rugby where winner = 'H' group by home_team
+having count(*) >= all (select count(*) from rugby s1 where s1.winner = 'H'  group by s1.home_team)) as t
+INTO OUTFILE 'home_success.csv'
+FIELDS TERMINATED BY ',';
 
+################ FEDERER PARTICIPATION AMOUNTS ##############
 
+select tournament, count(*) from tennis_men where player1 = 'Federer R.' or player2 = 'Federer R.' group by tournament having count(*) >= 20
+INTO OUTFILE 'federer_tournaments.csv'
+FIELDS TERMINATED BY ',';
 
+################ SERENA PARTICIPATION AMOUNTS ##############
 
+select tournament, count(*) from tennis_women where player1 = 'Williams S.' or player2 = 'Williams S.' group by tournament having count(*) >= 10
+INTO OUTFILE 'serena_tournaments.csv'
+FIELDS TERMINATED BY ',';
 
