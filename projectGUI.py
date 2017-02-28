@@ -1,9 +1,11 @@
+from tkinter import ttk
+
 import matplotlib
 import sys
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
 import pymysql
 from matplotlib import pylab as plt
+from tkinter.scrolledtext import *
 matplotlib.use("TkAgg")
 if sys.version_info[0] < 3:
     import Tkinter as tk
@@ -27,7 +29,7 @@ class SampleApp(tk.Tk):
 
         self.frames = {}
         for F in (StartPage, HelpPage, AllSportsPage, AllSportsOpt1Page, AllSportsOpt2Page, AllSportsOpt3Page,
-                  AllSportsOpt4Page, SoccerPage, SoccerOpt1Page, SoccerOpt2Page, SoccerOpt3Page,FootballPage,
+                  AllSportsOpt4Page, SoccerPage, SoccerOpt1Page, SoccerOpt2Page, SoccerOpt3Page, SoccerOpt4Page, FootballPage,
                   AmericanFootballPage, AmericanFootballOpt1Page, FootballComparePage, AustralianFootballPage,
                   AustralianFootballOpt1Page, CricketPage, CricketOpt1Page, CricketOpt2Page, BasketballPage,
                   BasketballOpt1Page, BasketballOpt2Page, HockeyPage, HockeyOpt1Page, HockeyOpt2Page, RugbyPage,
@@ -137,13 +139,6 @@ class AllSportsOpt1Page(tk.Frame):
         BGlabel.place(x=0, y=0, width=1571, height=839)
         label = tk.Label(self, text="All-Sports", bg="wheat", font=TITLE_FONT)
         label.place(x=620, y=50, width=120, height=44)
-
-        f = Figure(figsize=(5, 5), dpi=100)
-        a = f.add_subplot(111)
-        a.plot([1, 2, 3, 4, 5, 6, 7, 8], [5, 6, 1, 3, 8, 9, 3, 5])
-        canvas = FigureCanvasTkAgg(f, self)
-        canvas.show()
-        canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.NONE, expand=False)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
         option1 = tk.Button(self, text="Most Predictable", bg="white",
@@ -310,17 +305,20 @@ class SoccerPage(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="white",
+        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt1Page))
-        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="white",
+        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt2Page))
-        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="white",
+        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt3Page))
+        option4 = tk.Button(self, text="Queries", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt4Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=510, y=725, width=120, height=44)
-        option2.place(x=630, y=725, width=120, height=44)
-        option3.place(x=750, y=725, width=120, height=44)
+        option1.place(x=450, y=725, width=120, height=44)
+        option2.place(x=570, y=725, width=120, height=44)
+        option3.place(x=690, y=725, width=120, height=44)
+        option4.place(x=810, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -342,17 +340,20 @@ class SoccerOpt1Page(tk.Frame):
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.NONE, expand=False)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="white",
+        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt1Page))
-        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="white",
+        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt2Page))
-        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="white",
+        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt3Page))
+        option4 = tk.Button(self, text="Queries", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt4Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=510, y=725, width=120, height=44)
-        option2.place(x=630, y=725, width=120, height=44)
-        option3.place(x=750, y=725, width=120, height=44)
+        option1.place(x=450, y=725, width=120, height=44)
+        option2.place(x=570, y=725, width=120, height=44)
+        option3.place(x=690, y=725, width=120, height=44)
+        option4.place(x=810, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -374,17 +375,20 @@ class SoccerOpt2Page(tk.Frame):
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.NONE, expand=False)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="white",
+        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt1Page))
-        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="white",
+        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt2Page))
-        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="white",
+        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt3Page))
+        option4 = tk.Button(self, text="Queries", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt4Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=510, y=725, width=120, height=44)
-        option2.place(x=630, y=725, width=120, height=44)
-        option3.place(x=750, y=725, width=120, height=44)
+        option1.place(x=450, y=725, width=120, height=44)
+        option2.place(x=570, y=725, width=120, height=44)
+        option3.place(x=690, y=725, width=120, height=44)
+        option4.place(x=810, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -406,18 +410,148 @@ class SoccerOpt3Page(tk.Frame):
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.NONE, expand=False)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="white",
+        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt1Page))
-        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="white",
+        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt2Page))
-        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="white",
+        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="green",
                             command=lambda: controller.show_frame(SoccerOpt3Page))
+        option4 = tk.Button(self, text="Queries", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt4Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=510, y=725, width=120, height=44)
-        option2.place(x=630, y=725, width=120, height=44)
-        option3.place(x=750, y=725, width=120, height=44)
+        option1.place(x=450, y=725, width=120, height=44)
+        option2.place(x=570, y=725, width=120, height=44)
+        option3.place(x=690, y=725, width=120, height=44)
+        option4.place(x=810, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
+
+
+class SoccerOpt4Page(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        logo = tk.PhotoImage(file=r"backgrounds/soccer.png")
+        BGlabel = tk.Label(self, image=logo)
+        BGlabel.image = logo
+        BGlabel.place(x=0, y=0, width=1571, height=839)
+        label = tk.Label(self, text="Soccer", bg="green", font=TITLE_FONT)
+        label.place(x=620, y=50, width=100, height=44)
+
+        exit_btn = tk.Button(self, text="Exit", command=self.quit)
+        option1 = tk.Button(self, text="Big Clubs\nwins\\total", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt1Page))
+        option2 = tk.Button(self, text="Big Clubs\ntotal of draws", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt2Page))
+        option3 = tk.Button(self, text="Big Clubs\nloses\\total", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt3Page))
+        option4 = tk.Button(self, text="Queries", bg="green",
+                            command=lambda: controller.show_frame(SoccerOpt4Page))
+        back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
+        back.place(x=0, y=725, width=80, height=44)
+        option1.place(x=450, y=725, width=120, height=44)
+        option2.place(x=570, y=725, width=120, height=44)
+        option3.place(x=690, y=725, width=120, height=44)
+        option4.place(x=810, y=725, width=120, height=44)
+        exit_btn.place(x=1288, y=725, width=80, height=44)
+
+        self.frame = tk.Frame(self)
+        self.frame.pack(fill=tk.X)
+        self.leagues = ['Premier League', 'Championship', 'Spanish La Liga', 'Italian Seria A', 'French Liga 1',
+                   'German Bundesliga']
+        self.premier_cb = ['Hull', 'Watford', 'Aston Villa', 'Swansea', 'Fulham', 'Liverpool', 'Burnley', 'Blackpool',
+                      'West Brom', 'Chelsea', 'Leicester', 'Reading', 'Cardiff', 'Wolves', 'Portsmouth', 'Everton',
+                      'Middlesboro', 'Norwich', 'Arsenal', 'Bournemouth', 'Derby', 'Crystal Palace', 'Man United',
+                      'Newcastle', 'Southampton', 'West Ham', 'Wigan', 'QPR', 'Sheffield United', 'Leeds', 'Blackburn',
+                      'Stoke', 'Middlesbrough', 'Man City', 'Tottenham', 'Charlton', 'Birmingham', 'Sunderland',
+                      'Bolton']
+        self.champ_cb = ['Brighton', 'Barnsley', 'Bristol City', 'Fulham', 'Portsmouth', 'Norwich', 'Hull', 'Coventry',
+                    'Gillingham', 'Walsall', 'Bradford', 'Bournemouth', 'Southend', 'Bolton', 'Sunderland',
+                    'Southampton', 'Peterboro', 'Leeds', 'Leicester', 'Charlton', 'Blackburn', 'Yeovil',
+                    'Crystal Palace', 'Blackpool', 'West Ham', 'Cardiff', 'Burton', 'Crewe', 'Plymouth',
+                    'Preston', 'Newcastle', "Nott'm Forest", 'Sheffield Weds', 'QPR', 'Colchester', 'Ipswich',
+                    'Huddersfield', 'Wigan', 'Rotherham', 'Middlesbrough', 'Reading', 'Wimbledon', 'Swansea',
+                    'Millwall', 'Wolves', 'West Brom', 'Aston Villa', 'Stoke', 'Burnley', 'Grimsby', 'Brentford',
+                    'Sheffield United', 'Milton Keynes Dons', 'Derby', 'Scunthorpe', 'Luton', 'Watford',
+                    'Doncaster', 'Birmingham']
+
+        self.italian1_cb = ['Lazio', 'Torino', 'Sassuolo', 'Perugia', 'Como', 'Chievo', 'Roma', 'Udinese', 'Empoli', 'Cesena',
+                       'Juventus', 'Cagliari', 'Brescia', 'Livorno', 'Atalanta', 'Verona', 'Napoli', 'Parma', 'Ancona',
+                       'Bologna', 'Ascoli', 'Lecce', 'Inter', 'Carpi', 'Siena', 'Milan', 'Reggina', 'Catania', 'Treviso',
+                       'Messina', 'Frosinone', 'Crotone', 'Modena', 'Fiorentina', 'Sampdoria', 'Novara', 'Bari',
+                       'Piacenza', 'Genoa', 'Pescara', 'Palermo']
+
+        self.f1_cb = ['Strasbourg', 'Metz', 'Lorient', 'Paris SG', 'Toulouse', 'St Etienne', 'Istres', 'Angers', 'Sedan',
+                 'Boulogne', 'Bordeaux', 'Marseille', 'Nantes', 'Monaco', 'Ajaccio', 'Le Havre', 'Nice', 'Caen',
+                 'Rennes', 'Lyon', 'Sochaux', 'Nancy', 'Grenoble', 'Guingamp', 'Reims', 'Ajaccio GFCO', 'Le Mans',
+                 'Bastia', 'Dijon', 'Evian Thonon Gaillard', 'Lille', 'Valenciennes', 'Lens', 'Troyes', 'Auxerre',
+                 'Montpellier', 'Brest', 'Arles']
+        self.sp_cb = ['Albacete', 'Leganes', 'Cordoba', 'Levante', 'Ath Bilbao', 'Real Madrid', 'Hercules', 'La Coruna',
+                 'Sp Gijon', 'Valencia', 'Granada', 'Santander', 'Eibar', 'Murcia', 'Sociedad', 'Las Palmas', 'Almeria',
+                 'Valladolid', 'Espanol', 'Getafe', 'Ath Madrid', 'Villarreal', 'Recreativo', 'Sevilla', 'Xerez',
+                 'Osasuna', 'Malaga', 'Mallorca', 'Zaragoza', 'Elche', 'Vallecano', 'Gimnastic', 'Numancia', 'Celta',
+                 'Tenerife', 'Alaves', 'Cadiz', 'Barcelona', 'Betis']
+        self.ger_cb = ['RB Leipzig', 'Salzburg', 'Austria Vienna', 'SV Werder Bremen', 'Ingolstadt', 'Rapid Vienna',
+                  'Sturm Graz', 'Mattersburg', 'Hamburger SV', 'Schalke', 'Ried', 'FC Augsburg', 'Darmstadt',
+                  'St. Polten', 'SC Freiburg', 'Wolfsburg', 'AC Wolfsberger', 'Bayer Leverkusen', 'B. Monchengladbach',
+                  'Admira', 'Altach', 'Dortmund', 'Bayern Munich', 'Hertha Berlin', 'Hoffenheim', '1. FSV Mainz 05',
+                  '1. FC Koln', 'Eintracht Frankfurt']
+
+        self.query_part1 = "select * from soccer where home_team = "
+        self.query_part2 = " or away_team = "
+
+        self.league_cb = ttk.Combobox(self.frame, height=200, width=60, values=self.leagues)
+        self.league_cb.pack(side=tk.LEFT)
+        self.league_cb.bind("<<ComboboxSelected>>", self.get_league)
+        self.league_cb.set(self.leagues[0])
+        self.display_query = ScrolledText(self, bg='white', width=165, height=25, font="Arial 12")
+        self.display_query.pack()
+        self.club_cb = ttk.Combobox(self.frame, height=200, width=60, values=self.premier_cb)
+        self.club_cb.pack(side=tk.LEFT)
+        self.club_cb.bind("<<ComboboxSelected>>", self.make_query)
+        self.club_cb.set(self.premier_cb[0])
+        self.display((self.query_part1 + "\'" + str(self.club_cb.get()) + "\'" + self.query_part2 + "\'" +
+                                   str(self.club_cb.get()) + "\'" + ';'))
+
+    def get_league(self, event):
+        league = self.league_cb.get()
+        if league == 'Premier League':
+            self.club_cb['values'] = self.premier_cb
+            self.club_cb.set(self.premier_cb[0])
+        elif league == 'Championship':
+            self.club_cb['values'] = self.champ_cb
+            self.club_cb.set(self.champ_cb[0])
+        elif league == 'Spanish La Liga':
+            self.club_cb['values'] = self.sp_cb
+            self.club_cb.set(self.sp_cb[0])
+        elif league == 'Italian Seria A':
+            self.club_cb['values'] = self.italian1_cb
+            self.club_cb.set(self.italian1_cb[0])
+        elif league == 'French Liga 1':
+            self.club_cb['values'] = self.f1_cb
+            self.club_cb.set(self.f1_cb[0])
+        else:  # Bundesliga
+            self.club_cb['values'] = self.ger_cb
+            self.club_cb.set(self.ger_cb[0])
+        self.display_query.delete('1.0', tk.END)
+        self.display((self.query_part1 + "\'" + str(self.club_cb.get()) + "\'" + self.query_part2 + "\'" +
+                      str(self.club_cb.get()) + "\'" + ';'))
+        return
+
+    def make_query(self, event):
+        self.display_query.delete('1.0', tk.END)
+        self.display((self.query_part1 + "\'" + str(self.club_cb.get()) + "\'" + self.query_part2 + "\'" +
+                            str(self.club_cb.get()) + "\'" + ';'))
+
+    def display(self, sql):
+        query_result = make_query(sql)
+        print(query_result)
+        self.display_query.insert("insert",
+                                  "Date\t\tLeague\t\t  Home Team\t\t\tAwayTeam\t\t\tResult\tHome Result\t\tAway Result\n\n")
+        for result in query_result:
+            self.display_query.insert("insert", (str(result[0]) + '\t\t' + str(result[1]) + '\t\t   ' +
+                                                 str(result[2]) + '\t\t\t' + str(result[3]) + '\t\t\t  ' +
+                                                 str(result[4]) + '\t         ' + str(result[5]) + '\t\t        ' +
+                                                 str(result[6]) + '\n'))
 
 
 class BasketballPage(tk.Frame):
@@ -431,9 +565,9 @@ class BasketballPage(tk.Frame):
         label.place(x=620, y=50, width=150, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="cyan",
                             command=lambda: controller.show_frame(BasketballOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="cyan",
                             command=lambda: controller.show_frame(BasketballOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -453,9 +587,9 @@ class BasketballOpt1Page(tk.Frame):
         label.place(x=620, y=50, width=150, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="cyan",
                             command=lambda: controller.show_frame(BasketballOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="cyan",
                             command=lambda: controller.show_frame(BasketballOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -475,9 +609,9 @@ class BasketballOpt2Page(tk.Frame):
         label.place(x=620, y=50, width=150, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="cyan",
                             command=lambda: controller.show_frame(BasketballOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="cyan",
                             command=lambda: controller.show_frame(BasketballOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -545,7 +679,7 @@ class AmericanFootballPage(tk.Frame):
         label.place(x=600, y=50, width=195, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Total score\nof all teams", bg="white",
+        option1 = tk.Button(self, text="Total score\nof all teams", bg="red",
                             command=lambda: controller.show_frame(AmericanFootballOpt1Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(FootballPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -565,7 +699,7 @@ class AmericanFootballOpt1Page(tk.Frame):
         T = tk.Text(self, height=2, width=52, font=PRINT_FONT)
         T.pack(side=tk.BOTTOM, ipady=40, expand=False)
         query = "select(select sum(home_score) from american_football)+(select sum(away_score) from american_football);"
-        T.insert(tk.END, "\n\n\n            The total score of all teams in 1978 is: " + str(make_query(query)[0]))
+        T.insert(tk.END, "\n\n\n            The total score of all teams in 1978 is: " + str(make_query(query)[0][0]))
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(FootballPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -583,7 +717,7 @@ class AustralianFootballPage(tk.Frame):
         label.place(x=600, y=50, width=200, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Total wins\nas underdog", bg="white",
+        option1 = tk.Button(self, text="Total wins\nas underdog", bg="red",
                             command=lambda: controller.show_frame(AustralianFootballOpt1Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(FootballPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -625,14 +759,14 @@ class HockeyPage(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="orange red",
                             command=lambda: controller.show_frame(HockeyOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="orange red",
                             command=lambda: controller.show_frame(HockeyOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -647,14 +781,14 @@ class HockeyOpt1Page(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="orange red",
                             command=lambda: controller.show_frame(HockeyOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="orange red",
                             command=lambda: controller.show_frame(HockeyOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -669,14 +803,14 @@ class HockeyOpt2Page(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="orange red",
                             command=lambda: controller.show_frame(HockeyOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="orange red",
                             command=lambda: controller.show_frame(HockeyOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -691,9 +825,9 @@ class TennisPage(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Participation of\nFederer", bg="white",
+        option1 = tk.Button(self, text="Participation of\nFederer", bg="goldenrod1",
                             command=lambda: controller.show_frame(TennisOpt1Page))
-        option2 = tk.Button(self, text="Participation of\nSerena", bg="white",
+        option2 = tk.Button(self, text="Participation of\nSerena", bg="goldenrod1",
                             command=lambda: controller.show_frame(TennisOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -720,9 +854,9 @@ class TennisOpt1Page(tk.Frame):
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.NONE, expand=False)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Participation of\nFederer", bg="white",
+        option1 = tk.Button(self, text="Participation of\nFederer", bg="goldenrod1",
                             command=lambda: controller.show_frame(TennisOpt1Page))
-        option2 = tk.Button(self, text="Participation of\nSerena", bg="white",
+        option2 = tk.Button(self, text="Participation of\nSerena", bg="goldenrod1",
                             command=lambda: controller.show_frame(TennisOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -749,9 +883,9 @@ class TennisOpt2Page(tk.Frame):
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.NONE, expand=False)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Participation of\nFederer", bg="white",
+        option1 = tk.Button(self, text="Participation of\nFederer", bg="goldenrod1",
                             command=lambda: controller.show_frame(TennisOpt1Page))
-        option2 = tk.Button(self, text="Participation of\nSerena", bg="white",
+        option2 = tk.Button(self, text="Participation of\nSerena", bg="goldenrod1",
                             command=lambda: controller.show_frame(TennisOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
@@ -771,14 +905,14 @@ class RugbyPage(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="purple4",
                             command=lambda: controller.show_frame(RugbyOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="purple4",
                             command=lambda: controller.show_frame(RugbyOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -793,14 +927,14 @@ class RugbyOpt1Page(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="purple4",
                             command=lambda: controller.show_frame(RugbyOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="purple4",
                             command=lambda: controller.show_frame(RugbyOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -815,14 +949,14 @@ class RugbyOpt2Page(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="purple4",
                             command=lambda: controller.show_frame(RugbyOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="purple4",
                             command=lambda: controller.show_frame(RugbyOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -837,14 +971,14 @@ class CricketPage(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="blue",
                             command=lambda: controller.show_frame(CricketOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="blue",
                             command=lambda: controller.show_frame(CricketOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -859,14 +993,14 @@ class CricketOpt1Page(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="blue",
                             command=lambda: controller.show_frame(CricketOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="blue",
                             command=lambda: controller.show_frame(CricketOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -881,14 +1015,14 @@ class CricketOpt2Page(tk.Frame):
         label.place(x=620, y=50, width=100, height=44)
 
         exit_btn = tk.Button(self, text="Exit", command=self.quit)
-        option1 = tk.Button(self, text="Most Predictable", bg="white",
+        option1 = tk.Button(self, text="Most Predictable", bg="blue",
                             command=lambda: controller.show_frame(CricketOpt1Page))
-        option2 = tk.Button(self, text="Most Unpredictable", bg="white",
+        option2 = tk.Button(self, text="Most Unpredictable", bg="blue",
                             command=lambda: controller.show_frame(CricketOpt2Page))
         back = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         back.place(x=0, y=725, width=80, height=44)
-        option1.place(x=450, y=725, width=120, height=44)
-        option2.place(x=570, y=725, width=120, height=44)
+        option1.place(x=590, y=725, width=120, height=44)
+        option2.place(x=710, y=725, width=120, height=44)
         exit_btn.place(x=1288, y=725, width=80, height=44)
 
 
@@ -899,7 +1033,7 @@ def make_query(sql):
         with connection.cursor() as cursor:
             # Read a single record
             cursor.execute(sql)
-            result = cursor.fetchone()
+            result = cursor.fetchall()
             # print(result)
     finally:
         connection.close()
