@@ -18,22 +18,24 @@
 
 2. Download and install the prefered python version: https://www.python.org/downloads/
 
-3. Run the file 'run.py'
+3. Install the required packages (see below).
+
+4. Run the file 'run.py'
    This should create and fill the database which then can be queried using SQL statements.
 
-4. Run the file 'projectGUI.py'
+5. Run the file 'projectGUI.py', using python 3.
    This should display the GUI as shown in the video.
 
 ####### Pip modules required for the project to run  #######
 
-DB modules:
+DB modules: (using pip2)
 
 - pymysql
 - xlrd
 - dateutil
 - calendar
 
-GUI modules:
+GUI modules: (using pip)
 
 - tkinter
 - matplotlib
